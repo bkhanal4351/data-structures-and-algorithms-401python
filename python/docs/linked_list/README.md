@@ -1,3 +1,5 @@
+[PR Link](https://github.com/bkhanal4351/data-structures-and-algorithms-401python/pull/1)
+
 # Singly Linked List
 Singly linked list contains a single pointer that connects the previous node to the next node. Each node has two peice of data the value and next node value.
 ![](https://geekflare.com/wp-content/uploads/2021/02/1.png)
