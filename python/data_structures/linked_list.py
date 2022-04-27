@@ -15,7 +15,6 @@ class LinkedList:
         output_str += "NULL"
         return output_str
 
-
     def insert(self, value):
         self.head = Node(value, self.head)
 
@@ -27,7 +26,6 @@ class LinkedList:
                 return True
             current = current.next
         return False
-
 
     def append(self, value):
         new_node = Node(value)
@@ -54,11 +52,6 @@ class LinkedList:
                 return
             current = current.next
 
-
-
-
-
-
     def insert_after(self, value, new_value):
         if not self.head:
             raise TargetError
@@ -73,16 +66,35 @@ class LinkedList:
                 return
             current = current.next
 
+    def kth_from_end(self, k):
+        if k < 0:
+            raise TargetError
+        if self.head is None:
+            raise TargetError
+
+            1,2,3,4,5
+
+        length = 0
+        current = self.head
+
+        while current:  # this is to traverse to the very end of the list and calculate length
+            length += 1
+            current = current.next
+
+        if k >= length:
+            raise TargetError
+        current = self.head
+        distance_to_desire_node = length - k  # deducting the input index from user from the length of list returns
+        # the expected index value
+
+        while distance_to_desire_node > 1:  # desire node runs the while loop
+            current = current.next  # keeps going to the next value until it reaches the desired value
+            distance_to_desire_node -= 1  # telling us how many times we have to go to next until we reach the value
+
+        return current.value  # returns expected value
 
 
-
-
-
-
-
-
-
-class TargetError(BaseException):
+class TargetError(Exception):
     pass
 
 
