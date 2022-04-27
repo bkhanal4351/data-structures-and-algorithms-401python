@@ -72,8 +72,7 @@ class LinkedList:
         if self.head is None:
             raise TargetError
 
-            1,2,3,4,5
-
+        
         length = 0
         current = self.head
 
