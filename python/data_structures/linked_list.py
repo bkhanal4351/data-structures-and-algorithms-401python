@@ -29,6 +29,10 @@ class LinkedList:
 
     def append(self, value):
         new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            return
+
         current = self.head
         while current.next:
             current = current.next
@@ -72,7 +76,6 @@ class LinkedList:
         if self.head is None:
             raise TargetError
 
-        
         length = 0
         current = self.head
 
