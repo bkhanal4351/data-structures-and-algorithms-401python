@@ -1,3 +1,5 @@
+from queue import Queue
+
 class BinaryTree:
     """
     Put docstring here
@@ -68,6 +70,25 @@ class BinaryTree:
 
         else:
             return False # if self.root is None than return false
+
+
+
+# def breadth_first(tree):
+
+#         if tree.root == None:
+#             return
+#         queue = Queue()
+#         queue.enqueue(tree.root)
+#         output =[]
+#         while not queue.is_empty():
+#             front = queue.dequeue()
+#             if front.right:
+#                 queue.enqueue(front.right)
+#             if front.left:
+#                 queue.enqueue(front.left)
+#             output.append(front.value)
+#         return output
+
 
 class Node:
     def __init__(self, value):
