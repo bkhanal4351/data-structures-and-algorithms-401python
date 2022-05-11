@@ -23,7 +23,7 @@ Big 0
 def find_maximum_value(self):
         if self.root: # do this when self.root is not None
             value = self.in_order() # set value to call in_order method(we could have used any of the three methods and it would work)
-            maximum_value = value[0] # initially set max value to the first index value of the list created in in_order method 
+            maximum_value = value[0] # initially set max value to the first index value of the list created in in_order method
             for num in value: # go through for loop and iterate through each number in the list
                 if num > maximum_value: # if num is greater than current max value
                     maximum_value = num # reassign max value to num
