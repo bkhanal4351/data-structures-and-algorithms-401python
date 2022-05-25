@@ -31,3 +31,21 @@ def test_rome_num4():
     actual = when_in_rome(roman)
     expected = 900
     assert actual == expected
+
+def test_rome_num5():
+    roman = 'CMI'
+    actual = when_in_rome(roman)
+    expected = 901
+    assert actual == expected
+
+def test_rome_num6():
+    roman = 'CMIX'
+    actual = when_in_rome(roman)
+    expected = 909
+    assert actual == expected
+
+def test_rome_num7():
+    roman = 'CMXVI'
+    actual = when_in_rome(roman)
+    expected = 916
+    assert actual == expected
