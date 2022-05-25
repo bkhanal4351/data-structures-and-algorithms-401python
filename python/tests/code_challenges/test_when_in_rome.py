@@ -49,3 +49,15 @@ def test_rome_num7():
     actual = when_in_rome(roman)
     expected = 916
     assert actual == expected
+def test_rome_num8():
+    roman = 'cMXVI'
+    actual = when_in_rome(roman)
+    expected = 916
+    assert actual == expected
+
+def test_rome_num9():
+    roman = 'vii'
+    actual = when_in_rome(roman)
+    expected = 7
+    assert actual == expected
+
