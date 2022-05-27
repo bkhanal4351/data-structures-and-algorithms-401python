@@ -5,7 +5,7 @@ Write a function called repeated word that finds the first word to occur more th
 
 
 ## Whiteboard Process
-1[](hashmap-repeated-word.png)
+![](hashmap-repeated-word.png)
 
 ## Approach & Efficiency
 -  Write a function with argument string
@@ -21,6 +21,7 @@ Big 0
 Space:O(1): Since we are only saving the first repeated word.
 
 ## Solution
+
 import re
 
 def first_repeated_word(string):
