@@ -2,7 +2,7 @@
 import re
 
 def first_repeated_word(string):
-    unique_word = set() # store in a set becuase set does is mutable , iterable and does not allow duplicate values
+    unique_word = set() # store in a set becuase set is mutable , iterable and does not allow duplicate values
     regex = re.compile('[^a-zA-Z ]')
     stripped_string = regex.sub('', string)
 
