@@ -25,8 +25,12 @@ class Hashtable:
         bucket = self.buckets[index]
         bucket.insert((key, value))
 
+        return None
+
     def get(self, key):
         index = self.hash(key)
+        if self.buckets[index] is None:
+            return None
         bucket = self.buckets[index]
         current = bucket.head
         while current:
@@ -36,7 +40,8 @@ class Hashtable:
                 return pair[1]
 
             current = current.next
-        return None
+
+
 
     def contains(self, key):
         return bool(self.get(key))
