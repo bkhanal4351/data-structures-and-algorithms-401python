@@ -8,7 +8,6 @@ def test_exists():
     assert tree_intersection
 
 
-@pytest.mark.skip("TODO")
 def test_tree_intersection():
 
     tree_a = BinaryTree()
@@ -23,6 +22,25 @@ def test_tree_intersection():
     expected = [125, 175, 100, 160, 500, 200, 350]
 
     assert sorted(actual) == sorted(expected)
+
+
+def test_tree_no_intersection():
+
+    tree_a = BinaryTree()
+    values = [2]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = [1]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = []
+
+    assert sorted(actual) == sorted(expected)
+
+
+
 
 
 def add_values_to_empty_tree(tree, values):
